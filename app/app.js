@@ -1,7 +1,13 @@
 (function() {
     'use strict';
 
-    var hackApp = angular.module('hackApp', ['toastr', 'ui.router']);
+    var hackApp = angular.module('hackApp', ['toastr', 'ui.router', 'ngSanitize']);
+
+    hackApp.filter('trustThisUrl', ['$sce', function($sce) {
+        return function(val) {
+            return $sce.trustAsResourceUrl(val);
+        };
+    }]);
 
     hackApp.config(function($stateProvider, $urlRouterProvider) {
 

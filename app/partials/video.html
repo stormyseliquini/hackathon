@@ -1,8 +1,8 @@
-<input ng-model='vm.searchVideo' />
-<button ng-click='vm.videoSearch(vm.searchVideo)'>search</button>
+<button ng-click="vm.videoSearch('chuck norris')">
+    get chucked</button>
 <div>
     <div ng-repeat="data in vm.videoResponse.items">
-        <video class="video" width="560" height="315" ng-src="https://www.youtube.com/embed/{{data.id.videoId}}" frameborder="0" allowfullscreen></video>
+        <iframe class="video" width="560" height="315" ng-src="{{vm.getIframeSrc(data.id.videoId) | trustThisUrl}}" frameborder="0" allowfullscreen></iframe>
     </div>
 </div>
 <div ui-view></div>

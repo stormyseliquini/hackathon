@@ -13,12 +13,16 @@
         vm.title = 'indeedController';
 
 
-        ////////////////
 
+        ////////////////
+        vm.getIframeSrc = function(videoId) {
+            return 'https://www.youtube.com/embed/' + videoId;
+        };
         vm.videoSearch = function(searchVideo) {
             hackFactory.getVideo(searchVideo).then(
                 function(response) {
                     vm.videoResponse = response.data;
+
                     console.log(vm.videoResponse);
                     toastr.success("we've got videos");
                 },

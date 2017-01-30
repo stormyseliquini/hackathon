@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="hackApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hackathon?</title>
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/app/styles/styles.css">
+    <!-- endinject -->
+</head>
+
+<body>
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- endbower -->
+    <div>
+        <a id="searchLink" ui-sref="linked">home</a>
+    </div>
+    <div class="well" ui-view></div>
+    <!-- inject:js -->
+    <script src="/app/app.js"></script>
+    <script src="/app/hackathon.controller.js"></script>
+    <script src="/app/hackathon.crunchBase.controller.js"></script>
+    <script src="/app/hackathon.factory.js"></script>
+    <script src="/app/hackathon.indeed.controller.js"></script>
+    <!-- endinject -->
+</body>
+
+</html>

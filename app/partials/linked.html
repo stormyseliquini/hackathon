@@ -1,0 +1,9 @@
+<input ng-model='vm.searchJoke' />
+<button ng-click='vm.jokeSearch(vm.searchJoke)'>search</button>
+<div>
+    <div><span>{{vm.jokeResponse}}</span></div>
+</div>
+<div>
+    <a ui-sref="video">video</a>
+</div>
+<div ui-view></div>

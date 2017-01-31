@@ -1,9 +1,12 @@
-<input ng-model='vm.searchJoke' />
-<button ng-click='vm.jokeSearch(vm.searchJoke)'>search</button>
-<div>
-    <div><span>{{vm.jokeResponse}}</span></div>
+<div id="searchBox">
+    <input ng-model='vm.searchJoke' placeholder="first name" />
+    <br>
+    <button class="btn" ng-click='vm.jokeSearch(vm.searchJoke)'>get joke</button>
+    <div id="joke">
+        <div><span>{{vm.jokeResponse}}</span></div>
+    </div>
 </div>
-<div>
-    <a ui-sref="video">video</a>
+<div id="videoBox">
+    <a ui-sref="video">Get Chucked</a>
 </div>
 <div ui-view></div>

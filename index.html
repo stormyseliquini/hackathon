@@ -21,10 +21,14 @@
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <!-- endbower -->
-    <div>
-        <a id="searchLink" ui-sref="linked">home</a>
+    <div id="Home">
+        <div>
+            <img src="http://icons.iconarchive.com/icons/raindropmemory/red-little-shoes/256/Home-icon.png">
+            <br>
+            <a id="searchLink" ui-sref="linked">home</a>
+        </div>
+        <div ui-view></div>
     </div>
-    <div class="well" ui-view></div>
     <!-- inject:js -->
     <script src="/app/app.js"></script>
     <script src="/app/hackathon.controller.js"></script>
